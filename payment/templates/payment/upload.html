@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket_image</title>
+</head>
+<body>
+    <form method = "post" enctype="multipart/form-data" action="{% url 'upload' %}">
+        {% csrf_token %}
+        <input type="image" name="ticket_img">
+        <input type="submit">
+    </form>
+    <br>
+    <a href="{% url 'display_ticket' %}">View Ticket cart</a>
+</body>
+</html>
